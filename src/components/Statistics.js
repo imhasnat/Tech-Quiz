@@ -57,7 +57,12 @@ const Statistics = () => {
                     <Tooltip />
                 </PieChart>
             </div>
-
+            <div className="mb-6">
+                <p className="font-semibold"><span className="text-blue-500"><FontAwesomeIcon icon={faReact} /></span> React</p>
+                <p className="font-semibold"> <span className="text-yellow-500" ><FontAwesomeIcon icon={faCss3} /></span> CSS</p>
+                <p className="font-semibold"> <span className="text-green-500"><FontAwesomeIcon icon={faJs} /></span> JavaScript</p>
+                <p className="font-semibold"> <span className="text-orange-500"><FontAwesomeIcon icon={faGithub} /></span> Git</p>
+            </div>
         </div>
     );
 };

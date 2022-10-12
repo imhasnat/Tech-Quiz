@@ -19,6 +19,10 @@ const Question = ({ quiz, serial }) => {
         setToggleAnswer(!toggleAnswer)
     }
 
+    const checked = () => {
+        console.log('click')
+    }
+
     return (
         <div className='border border-gray-300 p-3 my-6 rounded-md shadow-md'>
             <div className='flex justify-between items-center p-2'>

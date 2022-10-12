@@ -12,12 +12,12 @@ export const router = createBrowserRouter([{
     loader: async () => fetch('https://openapi.programming-hero.com/api/quiz'),
     errorElement: <ErrorPage />,
     children: [
-        // { path: '/', element: <Home /> },
-        // {
-        //     path: '/quiz/:id',
-        //     loader: async ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
-        //     element: <Quiz></Quiz>
-        // },
+        { path: '/', element: <Home /> },
+        {
+            path: '/quiz/:id',
+            loader: async ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
+            element: <Quiz></Quiz>
+        },
         // { path: 'statistics', element: <Statistics /> },
         // { path: 'blog', element: <Blog></Blog> },
     ]

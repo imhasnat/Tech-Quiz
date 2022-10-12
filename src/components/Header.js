@@ -129,7 +129,7 @@ const Header = () => {
                                                     title='Topics'
                                                     className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                                                 >
-                                                    Topics
+                                                    Home
                                                 </Link>
                                             </li>
                                             <li>

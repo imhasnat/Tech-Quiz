@@ -10,11 +10,11 @@ const Topic = ({ topic }) => {
                 <img src={logo} alt="" className="object-cover object-center w-full rounded-t-md h-72 bg-gray-600" />
                 <div className="flex flex-col justify-between p-6 space-y-8">
                     <div className="space-y-2">
-                        <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
-                        <p className="dark:text-gray-100">{total} Questions</p>
+                        <h2 className="text-3xl font-bold tracking-wide">{name}</h2>
+                        <p className="dark:text-gray-100 font-semibold">{total} Questions</p>
                     </div>
                     <Link to={`quiz/${id}`}>
-                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 text-gray-900">Start Quiz</button>
+                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-slate-400 text-gray-900">Start Quiz</button>
                     </Link>
                 </div>
             </div>

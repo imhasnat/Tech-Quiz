@@ -6,11 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 
-const Question = ({ quiz, serial, handleRightAnswer }) => {
+const Question = ({ quiz, serial }) => {
     const [disableButton, setDisable] = useState(false);
     const [toggleAnswer, setToggleAnswer] = useState(true)
-
-    // let [wrongAnswer, setWrongAnswer] = useState(0)
     const { options, question, correctAnswer } = quiz;
 
     const handleDisable = () => {
@@ -35,12 +33,10 @@ const Question = ({ quiz, serial, handleRightAnswer }) => {
                 options.map((option, index) =>
                     <Option
                         key={index}
-                        index={index}
                         option={option}
                         handleDisable={handleDisable}
                         disableButton={disableButton}
                         correctAnswer={correctAnswer}
-                        handleRightAnswer={handleRightAnswer}
                     ></Option>)
             }
         </div>

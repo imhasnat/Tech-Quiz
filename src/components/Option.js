@@ -1,25 +1,28 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { RightAnswerContext, WrongAnswerContext } from './Quiz';
 
-const Option = ({ index, option, handleDisable, disableButton, correctAnswer, handleRightAnswer }) => {
+const Option = ({ option, handleDisable, disableButton, correctAnswer }) => {
 
-    const [color, setColor] = useState('bg-gray-400')
-
+    const [color, setColor] = useState('bg-slate-200')
+    const [rightAnswer, setRightAnswer] = useContext(RightAnswerContext)
+    const [wrongAnswer, setWrongAnswer] = useContext(WrongAnswerContext)
 
     const handleCorrectAnswer = (e) => {
 
-        setColor('bg-green-600');
+        setColor('bg-slate-400');
         handleDisable();
-        handleRightAnswer(1);
+        setRightAnswer(rightAnswer + 1);
         toast.success('Correct Answer!', {
             position: toast.POSITION.TOP_CENTER, autoClose: 500
         });
     }
     const handleWrongAnswer = (e) => {
-        setColor('bg-red-600');
+        setColor('bg-slate-400');
         handleDisable();
+        setWrongAnswer(wrongAnswer + 1);
         toast.error('Wrong Answer!', { position: toast.POSITION.TOP_CENTER, autoClose: 500 })
     }
 
@@ -33,7 +36,7 @@ const Option = ({ index, option, handleDisable, disableButton, correctAnswer, ha
                         e.target.value === correctAnswer ? handleCorrectAnswer(e) : handleWrongAnswer(e)
 
                     }}
-                    className={`w-full text-white font-semibold py-2 px-4 rounded ${color}`} >{option}
+                    className={`w-full text-gray-900 hover:bg-slate-400 font-semibold py-2 px-4 rounded ${color}`} >{option}
                 </button>
             </div>
         </div>

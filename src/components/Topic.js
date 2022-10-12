@@ -13,7 +13,7 @@ const Topic = ({ topic }) => {
                         <h2 className="text-3xl font-bold tracking-wide">{name}</h2>
                         <p className="dark:text-gray-100 font-semibold">{total} Questions</p>
                     </div>
-                    <Link to={`quiz/${id}`}>
+                    <Link to={`/topics/quiz/${id}`}>
                         <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-slate-400 text-gray-900">Start Quiz</button>
                     </Link>
                 </div>

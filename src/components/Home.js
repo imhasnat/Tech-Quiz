@@ -1,11 +1,8 @@
-import React, { useContext } from 'react';
-import { TopicsContext } from './Root'
-import Topic from './Topic';
+import React from 'react';
 import man from '../images/man.jpg'
+import Topics from './Topics';
 
 const Home = () => {
-    const topics = useContext(TopicsContext);
-
     const myStyle = {
         backgroundImage:
             `url(${man})`,
@@ -14,7 +11,6 @@ const Home = () => {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center'
     };
-
 
     return (
         <div className=''>
@@ -33,14 +29,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-10/12 md:w-9/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-6 my-10 '>
-                {
-                    topics.map(topic => <Topic
-                        key={topic.id}
-                        topic={topic}
-                    ></Topic>)
-                }
-            </div>
+            <Topics></Topics>
         </div>
     );
 };

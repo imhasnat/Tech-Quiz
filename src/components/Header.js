@@ -30,11 +30,21 @@ const Header = () => {
                         <li>
                             <Link
                                 to='/'
-                                aria-label='topics'
+                                aria-label='home'
                                 title='topics'
                                 className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                             >
                                 Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to='/topics'
+                                aria-label='topics'
+                                title='topics'
+                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                            >
+                                Topics
                             </Link>
                         </li>
                         <li>

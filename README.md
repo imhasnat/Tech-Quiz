@@ -1,5 +1,5 @@
 # Tech_Quiz
-## Live Webiste: 
+## Live Webiste: https://magnificent-frangipane-26b127.netlify.app/
 
 ### About this project
 This is a quiz website where users can give quizzes and get results instantly. The project uses React js and a CSS framework called Tailwind.

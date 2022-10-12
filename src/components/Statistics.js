@@ -36,7 +36,7 @@ const renderCustomizedLabel = ({
 const Statistics = () => {
     const data = useContext(TopicsContext)
     return (
-        <div className="w-10/12 md:w-9/12 lg:w-6/12 mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-items-center bg-gray-100 rounded-md shadow-md my-14 border border-gray-300">
+        <div className="w-10/12 md:w-9/12 lg:w-6/12 mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-items-center bg-gray-100 rounded-md shadow-md my-48 md:my-14 border border-gray-300">
             <div>
                 <PieChart width={380} height={400}>
                     <Pie

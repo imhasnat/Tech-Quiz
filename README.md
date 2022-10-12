@@ -1,7 +1,7 @@
 # Tech_Quiz
 ## Live Webiste: 
 
-##### About this project
+### About this project
 This is a quiz website where users can give quizzes and get results instantly. The project uses React js and a CSS framework called Tailwind.
 
 - Here I get the question data from an API.

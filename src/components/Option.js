@@ -20,6 +20,9 @@ const Option = ({ index, option, handleDisable, disableButton, correctAnswer }) 
         toast.error('Wrong Answer!', { position: toast.POSITION.TOP_CENTER, autoClose: 500 })
     }
 
+    function check() {
+        console.log('click');
+    }
 
     return (
         <div>

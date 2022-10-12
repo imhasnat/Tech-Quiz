@@ -6,9 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 
-const Question = ({ quiz, serial }) => {
+const Question = ({ quiz, serial, handleRightAnswer }) => {
     const [disableButton, setDisable] = useState(false);
     const [toggleAnswer, setToggleAnswer] = useState(true)
+
+    // let [wrongAnswer, setWrongAnswer] = useState(0)
     const { options, question, correctAnswer } = quiz;
 
     const handleDisable = () => {
@@ -18,6 +20,8 @@ const Question = ({ quiz, serial }) => {
     const handleToggleAnswer = () => {
         setToggleAnswer(!toggleAnswer)
     }
+
+
 
     return (
         <div className='border border-gray-300 p-3 my-6 rounded-md shadow-md'>
@@ -36,6 +40,7 @@ const Question = ({ quiz, serial }) => {
                         handleDisable={handleDisable}
                         disableButton={disableButton}
                         correctAnswer={correctAnswer}
+                        handleRightAnswer={handleRightAnswer}
                     ></Option>)
             }
         </div>

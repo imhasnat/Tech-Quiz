@@ -26,8 +26,8 @@ const Home = () => {
                         <div className="bg-no-repeat h-full bg-cover bg-gray-700 col-span-full lg:col-span-4" style={myStyle}></div>
 
                         <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10 order-2">
-                            <h1 className="text-3xl font-semibold">Lorem ipsum dolor sit.</h1>
-                            <p className="flex-1 pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, reprehenderit adipisci tempore voluptas laborum quod.</p>
+                            <h1 className="text-3xl font-semibold">YOU KNOW ,YOU GROW!!</h1>
+                            <p className="flex-1 pt-2">Unlocking knowledge at the speed of thought. Give some quiz and determine how much effort you have to give to pierce through your target</p>
 
                         </div>
                     </div>

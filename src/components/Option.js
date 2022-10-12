@@ -3,13 +3,16 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Option = ({ index, option, handleDisable, disableButton, correctAnswer }) => {
+const Option = ({ index, option, handleDisable, disableButton, correctAnswer, handleRightAnswer }) => {
 
     const [color, setColor] = useState('bg-gray-400')
 
+
     const handleCorrectAnswer = (e) => {
+
         setColor('bg-green-600');
         handleDisable();
+        handleRightAnswer(1);
         toast.success('Correct Answer!', {
             position: toast.POSITION.TOP_CENTER, autoClose: 500
         });
@@ -19,6 +22,7 @@ const Option = ({ index, option, handleDisable, disableButton, correctAnswer }) 
         handleDisable();
         toast.error('Wrong Answer!', { position: toast.POSITION.TOP_CENTER, autoClose: 500 })
     }
+
 
     return (
         <div>

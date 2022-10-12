@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Question from './Question';
 
 const Quiz = () => {
     const quizFetched = useLoaderData()
     const { name, questions } = quizFetched.data;
+    const [rightAnswer, setRightAnswer] = useState(0)
+    console.log(rightAnswer);
+    const handleRightAnswer = (r) => {
+
+        setRightAnswer(r + rightAnswer)
+    }
     let serial = 1;
     return (
         <div className='my-16'>
@@ -15,8 +21,11 @@ const Quiz = () => {
                         key={quiz.id}
                         quiz={quiz}
                         serial={serial++}
+                        handleRightAnswer={handleRightAnswer}
                     ></Question>)
                 }
+            </div>
+            <div>
             </div>
         </div>
     );

@@ -19,6 +19,6 @@ export const router = createBrowserRouter([{
             element: <Quiz></Quiz>
         },
         { path: 'statistics', element: <Statistics /> },
-        // { path: 'blog', element: <Blog></Blog> },
+        { path: 'blog', element: <Blog></Blog> },
     ]
 }])

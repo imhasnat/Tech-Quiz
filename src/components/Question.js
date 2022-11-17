@@ -10,6 +10,7 @@ const Question = ({ quiz, serial }) => {
     const [disableButton, setDisable] = useState(false);
     const [toggleAnswer, setToggleAnswer] = useState(true)
     const { options, question, correctAnswer } = quiz;
+    const [clicked, setClicked] = useState()
 
     const handleDisable = () => {
         setDisable(true)
@@ -20,6 +21,15 @@ const Question = ({ quiz, serial }) => {
     }
 
 
+    const handleClick = (option) => {
+        setClicked(option)
+    }
+
+    const handleAnswer = (option) => {
+        if (clicked === option && clicked === correctAnswer) return "bg-green-500";
+        else if (clicked === option && clicked !== correctAnswer) return "bg-red-500";
+        else if (option === correctAnswer) return "bg-green-500";
+    }
 
     return (
         <div className='border border-gray-300 p-3 my-6 rounded-md shadow-md'>
@@ -37,6 +47,9 @@ const Question = ({ quiz, serial }) => {
                         handleDisable={handleDisable}
                         disableButton={disableButton}
                         correctAnswer={correctAnswer}
+                        handleClick={handleClick}
+                        handleAnswer={handleAnswer}
+                        clicked={clicked}
                     ></Option>)
             }
         </div>
